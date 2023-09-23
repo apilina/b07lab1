@@ -58,6 +58,7 @@ public class Polynomial {
 		for(int i=0; i<len; i++) {
 			total += coefficients[i]*(Math.pow(x, xc));
 			xc++;
+			//System.out.println(total);
 		}
 
 		return total;
