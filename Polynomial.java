@@ -24,6 +24,10 @@ public class Polynomial {
 			max = (p.coefficients).length;
 			min = this.coefficients.length;
 		}
+		else {
+			max = p.coefficients.length;
+			min = max;
+		}
 		
 		double[] arr = new double[max];
 		
@@ -39,6 +43,7 @@ public class Polynomial {
 			else {
 				arr[i] = this.coefficients[i] + p.coefficients[i];
 			}
+			//System.out.println(arr[i]);
 		}
 		Polynomial temp = new Polynomial(arr);
 		
@@ -60,7 +65,7 @@ public class Polynomial {
 
 	public boolean hasRoot(double x) {
 		//check if x is a root of the polynomial
-		if(evaluate(x)==0) {
+		if(this.evaluate(x)==0) {
 			return true;
 		}
 		
